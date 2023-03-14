@@ -1,0 +1,12 @@
+{
+  "mqtt": {
+    "url": "mqtt://localhost:1883",
+    "topic": "zigbee2mqtt/+"
+  },
+  "prometheus": {
+    "url": "/metrics"
+  },
+  "http": {
+    "port": 8084
+  }
+}

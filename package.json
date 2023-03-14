@@ -1,0 +1,15 @@
+{
+  "name": "raspi-metrics",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Alexander Bareyko <militaryboy@yandex.ru>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "config": "^3.3.9",
+    "mqtt": "^4.3.7",
+    "prom-client": "^14.2.0"
+  }
+}
