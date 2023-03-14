@@ -60,7 +60,7 @@ mqttClient.on('connect', () => {
 });
 
 mqttClient.on('message', (topic, message) => {
-  console.log('Incoming message', topic, message.toString());
+  // console.log('Incoming message', topic, message.toString());
 
   let payload;
 
