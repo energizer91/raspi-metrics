@@ -1,7 +1,8 @@
 {
   "mqtt": {
     "url": "mqtt://localhost:1883",
-    "topic": "zigbee2mqtt/+"
+    "topic": "zigbee2mqtt/+",
+    "availabilityTopic": "zigbee2mqtt/+/availability"
   },
   "prometheus": {
     "url": "/metrics"

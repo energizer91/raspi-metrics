@@ -57,6 +57,15 @@ mqttClient.on('connect', () => {
 
     console.log('Successfully subscribed to topic', granted);
   });
+
+  mqttClient.subscribe(config.get('mqtt.availabilityTopic'), (err, granted) => {
+    if (err) {
+      console.error('Failed to subscribe to mqtt availability topic', err);
+      return;
+    }
+
+    console.log('Successfully subscribed to availability topic', granted);
+  });
 });
 
 mqttClient.on('message', (topic, message) => {
@@ -79,7 +88,7 @@ mqttClient.on('message', (topic, message) => {
   }
 
   Object.keys(payload).forEach((key) => {
-    if (typeof payload[key] !== 'number' || isNaN(payload[key])) {
+    if (typeof payload[key] !== 'number' || typeof payload[key] !== 'boolean' || isNaN(payload[key])) {
       return;
     }
 
