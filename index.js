@@ -88,7 +88,7 @@ mqttClient.on('message', (topic, message) => {
   }
 
   Object.keys(payload).forEach((key) => {
-    if (typeof payload[key] !== 'number' || typeof payload[key] !== 'boolean' || isNaN(payload[key])) {
+    if (typeof payload[key] !== 'number' && typeof payload[key] !== 'boolean' && isNaN(payload[key])) {
       return;
     }
 
