@@ -107,7 +107,7 @@ mqttClient.on('message', (topic, message) => {
       register.registerMetric(metric);
     }
 
-    metric.set({sno}, payload[key]);
+    metric.set({sno}, Number(payload[key]));
   });
 })
 
